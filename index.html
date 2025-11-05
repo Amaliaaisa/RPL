@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Input Nilai</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <h2>Portal Akademik</h2>
+    <div class="nav-links">
+      <a href="index.html">Input Nilai</a>
+      <a href="nilai-mahasiswa.html">Lihat Data Mahasiswa</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Formulir Input Nilai</h2>
+    <form id="formInput">
+      <label>Nama Lengkap</label>
+      <input type="text" id="nama" placeholder="Masukkan nama lengkap" required />
+
+      <label>NIM (Nomor Induk Mahasiswa)</label>
+      <input type="text" id="nim" placeholder="Contoh: 701230052" required />
+
+      <label>Mata Kuliah</label>
+      <select id="matkul" required>
+        <option value="">Pilih mata kuliah...</option>
+        <option value="MK001 - Rekayasa Perangkat Lunak">MK001 - Rekayasa Perangkat Lunak</option>
+        <option value="MK002 - Manajemen Risiko">MK002 - Manajemen Risiko</option>
+        <option value="MK003 - Pemrograman Mobile">MK003 -Pemrograman Mobile</option>
+        <option value="MK004 - Multimedia">MK004 - Multimedia</option>
+        <option value="MK005 - Bahasa Inggris">MK005 - Bahasa Inggris</option>
+        <option value="MK006 - Bahasa Arab">MK006 - Bahasa Arab</option>
+        <option value="MK007 - Manajemen Risiko">MK007 - Manajemen Risiko</option>
+        <option value="MK008 - Manajemen Proyek Bisnis">MK008 - Manajemen Proyek Bisnis</option>
+        <option value="MK009 - Technopreneurship">MK009 - Technopreneurship</option>
+        <option value="MK010 - Komunikasi Bisnis">MK010 - Komunikasi Bisnis</option>
+        <option value="MK011 - Sistem Operasi">MK011 - Sistem Operasi</option>
+        <option value="MK012 - Analisa dan Perancangan">MK012 - Analisa dan Perancangan</option>
+        <option value="MK013 - Islam Peradaban Melayu">MK013 - Islam Peradaban Melayu</option>
+        <option value="MK014 - Statistika dan Probabilitas">MK014 - Statistika dan probabilitas</option>
+        <option value="MK015 - Pengantar Bisnis dan Manajemen">MK015 - Pengantar Bisnis dan Manajemen</option>
+      </select>
+
+      <label>Nilai Mahasiswa</label>
+      <input type="number" id="nilai" step="0.1" placeholder="85.5" required />
+
+      <button type="submit">Simpan Data</button>
+    </form>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
