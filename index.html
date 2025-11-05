@@ -5,6 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Form Input Nilai</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* === NAVIGASI === */
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav h2 {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1a57ff;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: #0f3bd1; }
+
+    /* === FORM === */
+    main.container {
+      max-width: 600px;
+      margin: 50px auto 80px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    main.container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      background: #1a57ff;
+      color: #fff;
+      padding: 12px;
+      margin-top: 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover { background: #0f3bd1; }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 600px) {
+      nav h2 { font-size: 1.4rem; }
+      .nav-links { gap: 15px; }
+      main.container {
+        width: 90%;
+        margin: 40px auto 70px;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -29,7 +119,7 @@
         <option value="">Pilih mata kuliah...</option>
         <option value="MK001 - Rekayasa Perangkat Lunak">MK001 - Rekayasa Perangkat Lunak</option>
         <option value="MK002 - Manajemen Risiko">MK002 - Manajemen Risiko</option>
-        <option value="MK003 - Pemrograman Mobile">MK003 -Pemrograman Mobile</option>
+        <option value="MK003 - Pemrograman Mobile">MK003 - Pemrograman Mobile</option>
         <option value="MK004 - Multimedia">MK004 - Multimedia</option>
         <option value="MK005 - Bahasa Inggris">MK005 - Bahasa Inggris</option>
         <option value="MK006 - Bahasa Arab">MK006 - Bahasa Arab</option>
@@ -40,7 +130,7 @@
         <option value="MK011 - Sistem Operasi">MK011 - Sistem Operasi</option>
         <option value="MK012 - Analisa dan Perancangan">MK012 - Analisa dan Perancangan</option>
         <option value="MK013 - Islam Peradaban Melayu">MK013 - Islam Peradaban Melayu</option>
-        <option value="MK014 - Statistika dan Probabilitas">MK014 - Statistika dan probabilitas</option>
+        <option value="MK014 - Statistika dan Probabilitas">MK014 - Statistika dan Probabilitas</option>
         <option value="MK015 - Pengantar Bisnis dan Manajemen">MK015 - Pengantar Bisnis dan Manajemen</option>
       </select>
 
