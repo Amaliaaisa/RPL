@@ -5,113 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lihat Data Mahasiswa</title>
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    /* === NAVIGASI === */
-    nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    nav h2 {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #111;
-      margin-bottom: 12px;
-    }
-
-    /* === MENU TENGAH === */
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 600;
-      color: #1a57ff;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #0f3bd1;
-    }
-
-    /* === KONTEN UTAMA === */
-    main.container {
-      max-width: 800px;
-      margin: 80px auto 100px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    main.container h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #111;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: center;
-    }
-
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      word-wrap: break-word;
-    }
-
-    th {
-      background-color: #f4f4f4;
-      color: #000;
-      font-weight: 700;
-    }
-
-    /* === RESPONSIVE === */
-    @media (max-width: 600px) {
-      nav h2 {
-        font-size: 1.5rem;
-      }
-
-      .nav-links {
-        gap: 20px;
-      }
-
-      main.container {
-        width: 90%;
-        margin: 60px auto 80px auto;
-        padding: 20px;
-      }
-
-      table th, table td {
-        font-size: 0.9rem;
-        padding: 8px;
-      }
-    }
-  </style>
 </head>
 <body>
+  <!-- NAVIGASI -->
   <nav>
     <h2>Portal Akademik</h2>
     <div class="nav-links">
       <a href="index.html">Input Nilai</a>
-      <a href="nilai-mahasiswa.html">Lihat Data Mahasiswa</a>
+      <a href="nilai-mahasiswa.html" class="active">Lihat Data Mahasiswa</a>
     </div>
   </nav>
 
-  <main class="container">
+  <!-- KONTEN UTAMA -->
+  <main class="container no-background">
     <h2>Data Nilai Mahasiswa</h2>
     <table id="tabelData">
       <thead>
