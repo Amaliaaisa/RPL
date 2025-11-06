@@ -2,56 +2,101 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Form Input Nilai</title>
-  <link rel="stylesheet" href="css/style.css" />
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aplikasi Input Nilai Mahasiswa</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav>
-    <h2>Portal Akademik</h2>
-    <div class="nav-links">
-      <a href="index.html">Input Nilai</a>
-      <a href="nilai-mahasiswa.html">Lihat Data Mahasiswa</a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand fw-bold" href="#">Portal Akademik</a>
+      <div id="navButtons" class="d-flex gap-2"></div>
     </div>
   </nav>
 
-  <main class="container">
-    <h2>Formulir Input Nilai</h2>
-    <form id="formInput">
-      <label>Nama Lengkap</label>
-      <input type="text" id="nama" placeholder="Masukkan nama lengkap" required />
+  <!-- MAIN -->
+  <main class="container my-4">
+    <div id="alertArea"></div>
 
-      <label>NIM (Nomor Induk Mahasiswa)</label>
-      <input type="text" id="nim" placeholder="Contoh: 701230052" required />
+    <!-- DASHBOARD INPUT -->
+    <section id="inputDashboard">
+      <h4 class="fw-semibold mb-3">Form Input Nilai Mahasiswa</h4>
 
-      <label>Mata Kuliah</label>
-      <select id="matkul" required>
-        <option value="">Pilih mata kuliah...</option>
-        <option value="MK001 - Rekayasa Perangkat Lunak">MK001 - Rekayasa Perangkat Lunak</option>
-        <option value="MK002 - Manajemen Risiko">MK002 - Manajemen Risiko</option>
-        <option value="MK003 - Pemrograman Mobile">MK003 - Pemrograman Mobile</option>
-        <option value="MK004 - Multimedia">MK004 - Multimedia</option>
-        <option value="MK005 - Bahasa Inggris">MK005 - Bahasa Inggris</option>
-        <option value="MK006 - Bahasa Arab">MK006 - Bahasa Arab</option>
-        <option value="MK007 - Manajemen Risiko">MK007 - Manajemen Risiko</option>
-        <option value="MK008 - Manajemen Proyek Bisnis">MK008 - Manajemen Proyek Bisnis</option>
-        <option value="MK009 - Technopreneurship">MK009 - Technopreneurship</option>
-        <option value="MK010 - Komunikasi Bisnis">MK010 - Komunikasi Bisnis</option>
-        <option value="MK011 - Sistem Operasi">MK011 - Sistem Operasi</option>
-        <option value="MK012 - Analisa dan Perancangan">MK012 - Analisa dan Perancangan</option>
-        <option value="MK013 - Islam Peradaban Melayu">MK013 - Islam Peradaban Melayu</option>
-        <option value="MK014 - Statistika dan Probabilitas">MK014 - Statistika dan Probabilitas</option>
-        <option value="MK015 - Pengantar Bisnis dan Manajemen">MK015 - Pengantar Bisnis dan Manajemen</option>
-      </select>
+      <div class="card shadow-sm border">
+        <div class="card-body">
+          <form id="nilaiForm" class="d-flex flex-column gap-3">
+            
+            <div>
+              <label for="nama" class="form-label fw-semibold">Nama Mahasiswa</label>
+              <input type="text" id="nama" class="form-control" placeholder="Masukkan nama mahasiswa" required>
+            </div>
 
-      <label>Nilai Mahasiswa</label>
-      <input type="number" id="nilai" step="0.1" placeholder="85.5" required />
+            <div>
+              <label for="nim" class="form-label fw-semibold">NIM</label>
+              <input type="text" id="nim" class="form-control" placeholder="Masukkan NIM" required>
+            </div>
 
-      <button type="submit">Simpan Data</button>
-    </form>
+            <div>
+              <label for="mk" class="form-label fw-semibold">Mata Kuliah</label>
+              <select id="mk" class="form-select" required>
+                <option value="">-- Pilih Mata Kuliah --</option>
+                <option value="MK001|Multimedia">MK001 - Multimedia</option>
+                <option value="MK002|TechnoPreuneurship">MK002 - TechnoPreuneurship</option>
+                <option value="MK003|Pemrograman Mobile">MK003 - Pemrograman Mobile</option>
+                <option value="MK004|Rekayasa Perangkat Lunak">MK004 - Rekayasa Perangkat Lunak</option>
+                <option value="MK005|Testing dan Implementasi Sistem">MK005 - Testing dan Implementasi Sistem</option>
+                <option value="MK006|Manajemen Risiko">MK006 - Manajemen Risiko</option>
+                <option value="MK006|Sistem Operasi">MK007 - Sistem Operasi</option>
+                <option value="MK008|Matematika">MK008 - Matematika</option>
+                <option value="MK009|Bahasa Indonesia">MK009 - Bahasa Indonesia</option>
+                <option value="MK010|Konsep Sistem Informasi">MK010 - Konsep Sistem Informasi</option>
+
+              </select>
+            </div>
+
+            <div>
+              <label for="nilai" class="form-label fw-semibold">Nilai</label>
+              <input type="number" id="nilai" class="form-control" placeholder="0 - 100" min="0" max="100" required>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-2 flex-wrap">
+              <button type="submit" class="btn btn-success px-4" id="btnSimpan">Simpan Nilai</button>
+              <button type="button" class="btn btn-secondary px-4" id="btnClear">Clear</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD DATA -->
+    <section id="dataDashboard" class="d-none">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <h3 class="fw-semibold m-0">Data Mahasiswa</h3>
+        <button type="button" class="btn btn-outline-primary" id="btnRefresh">Refresh</button>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle" id="mahasiswaTable">
+          <thead class="table-primary text-center">
+            <tr>
+              <th style="width:60px">No</th>
+              <th>Nama Mahasiswa</th>
+              <th style="width:140px">NIM</th>
+              <th style="width:100px">Kode MK</th>
+              <th>Mata Kuliah</th>
+              <th style="width:100px">Nilai</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
   </main>
 
-  <script type="module" src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./js/main.js"></script>
 </body>
 </html>

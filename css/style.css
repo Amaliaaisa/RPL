@@ -1,147 +1,67 @@
-/* === NAVIGASI UNTUK SEMUA HALAMAN === */
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
+body {
+  background-color: #f7f9fb;
 }
 
-nav h2 {
-  font-size: 1.7rem;
-  font-weight: bold;
-  color: #111;
-  margin-bottom: 10px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #1a57ff;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #0f3bd1;
-}
-
-/* Link aktif */
-.nav-links a.active {
-  color: #0f3bd1;
-  border-bottom: 2px solid #0f3bd1;
-  padding-bottom: 3px;
-}
-
-/* === FORM DAN TABEL === */
-main.container {
-  max-width: 800px;
-  margin: 60px auto 100px;
-  padding: 30px;
+/* Kotak form */
+.card {
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background: #fff; /* Hanya untuk halaman form */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 10px 15px;
 }
 
-main.container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #111;
-}
-
-form label {
-  display: block;
-  margin-top: 15px;
+/* Judul form dan tabel */
+h4 {
+  color: #222;
+  font-size: 1.6rem; /* ✅ ukuran lebih besar, seimbang dengan Data Mahasiswa */
   font-weight: 600;
 }
 
-form input, form select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
+h3 {
+  font-size: 1.6rem; /* ✅ biar ukuran Data Mahasiswa juga sama */
+  font-weight: 600;
+  color: #222;
+}
+
+/* Label dan input */
+.form-label {
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input.form-control,
+select.form-select {
+  border-radius: 6px;
   border: 1px solid #ccc;
+  padding: 10px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+input.form-control:focus,
+select.form-select:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+/* Tombol */
+.btn {
   border-radius: 6px;
 }
 
-button {
-  width: 100%;
-  background: #1a57ff;
-  color: #fff;
-  padding: 12px;
-  margin-top: 25px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background: #0f3bd1;
-}
-
-/* TABEL */
-table {
-  width: 100%;
-  border-collapse: collapse;
+/* === TABEL === */
+.table {
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
   text-align: center;
 }
 
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  word-wrap: break-word;
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
 }
 
-th {
-  background-color: #f4f4f4;
-  font-weight: 700;
-}
-
-/* === HALAMAN LIHAT DATA MAHASISWA (HAPUS KOTAK PUTIH) === */
-main.no-background {
-  background: none;
-  box-shadow: none;
-  padding: 0;
-  margin: 40px auto;
-}
-
-/* === RESPONSIVE UNTUK HP === */
-@media (max-width: 600px) {
-  nav h2 {
-    font-size: 1.4rem;
-  }
-
-  .nav-links {
-    gap: 15px;
-  }
-
-  main.container {
-    width: 90%;
-    margin: 40px auto 70px;
-    padding: 20px;
-  }
-
-  table th, table td {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-
-  form label,
-  form input,
-  form select,
-  button {
-    font-size: 0.95rem;
-  }
+/* Animasi dashboard */
+#inputDashboard, #dataDashboard {
+  transition: all 0.3s ease;
 }
