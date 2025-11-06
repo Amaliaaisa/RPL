@@ -79,3 +79,67 @@ table th, table td {
 table th {
   background-color: #f1f5f9;
 }
+/* === RESPONSIVE DESIGN UNTUK LAPTOP DAN HP === */
+
+/*  Untuk layar besar seperti Laptop/Desktop */
+@media (min-width: 1024px) {
+  nav {
+    padding: 20px 100px;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    margin-left: 25px;
+  }
+
+  .container {
+    max-width: 700px; /* form lebih lebar dan proporsional */
+    margin: 60px auto;
+    padding: 40px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/*  Untuk layar kecil ) */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;     /* susun vertikal */
+    align-items: center;        /* rata tengah */
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .nav-links a {
+    display: block;             /* tiap menu di baris baru */
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  .container {
+    width: 92%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  form label {
+    font-size: 0.9rem;
+  }
+
+  form input,
+  form select {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
